@@ -1,13 +1,11 @@
 import './App.css';
+import ChatBox from './components/ChatBox';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>ChatForAll</h1>
-        <p>
-        A simple realtime Chat applcation using React and Firebase without authentication
-        </p>
+        <ChatBox/>
       </header>
     </div>
   );
