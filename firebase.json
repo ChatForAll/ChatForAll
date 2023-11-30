@@ -1,0 +1,11 @@
+{
+  "hosting": {
+    "public": "build",
+    "site": "chatforall",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}
