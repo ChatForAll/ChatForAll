@@ -1,5 +1,5 @@
 # ChatForAll
-💬 A simple realtime Chat applcation using React and Firebase without authentication
+💬 A simple realtime chat applcation without authentication created using Next.js and Firebase
 
 Available in the following domains:
 - [chat4all.web.app](https://chat4all.web.app/)
