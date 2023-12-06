@@ -1,11 +1,19 @@
 {
-  "hosting": {
-    "public": "build",
-    "site": "chatforall",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+  "hosting":[
+    {
+      "target": "chat4all",
+      "public": "build",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "chatforall",
+      "public": "build",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "note1",
+      "public": "build",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    }
+  ]
 }

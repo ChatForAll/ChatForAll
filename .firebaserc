@@ -1,5 +1,21 @@
 {
   "projects": {
     "default": "chatforall-86963"
-  }
+  },
+  "targets": {
+    "chatforall-86963": {
+      "hosting": {
+        "chat4all": [
+          "chat4all"
+        ],
+        "chatforall": [
+          "chatforall"
+        ],
+        "note1": [
+          "note1"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
