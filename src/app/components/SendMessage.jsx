@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { db } from "../firebase-config";
+import { db } from "../../firebase-config";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 const SendMessage = ({ scroll }) => {
@@ -14,14 +14,19 @@ const SendMessage = ({ scroll }) => {
     await addDoc(collection(db, "messages"), {
       text: message,
       name: "User",
-      avatar: "https://cdn.pixabay.com/photo/2017/01/10/03/54/avatar-1968236_960_720.png",
+      avatar:
+        "https://cdn.pixabay.com/photo/2017/01/10/03/54/avatar-1968236_960_720.png",
       createdAt: serverTimestamp(),
     });
     setMessage("");
     scroll.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <form onSubmit={(event) => sendMessage(event)} className="send-message" autoComplete="off">
+    <form
+      onSubmit={(event) => sendMessage(event)}
+      className="send-message"
+      autoComplete="off"
+    >
       <label htmlFor="messageInput" hidden>
         Enter Message
       </label>

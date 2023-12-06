@@ -11,6 +11,7 @@ body {
   max-width: 100vw;
   font-size: 16px;
   font-family: sans-serif;
+  background-color: #191724;
 }
 
 button{
@@ -29,6 +30,7 @@ button{
 .messages-wrapper {
   padding: 30px;
   margin-bottom: 60px;
+  color: #e0def4;
 }
 
 

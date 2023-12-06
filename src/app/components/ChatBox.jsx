@@ -1,11 +1,7 @@
+"use client";
 import React, { useEffect, useRef, useState } from "react";
-import {
-  query,
-  collection,
-  orderBy,
-  onSnapshot,
-} from "firebase/firestore";
-import { db } from "../firebase-config";
+import { query, collection, orderBy, onSnapshot } from "firebase/firestore";
+import { db } from "../../firebase-config";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
 
@@ -14,10 +10,7 @@ const ChatBox = () => {
   const scroll = useRef();
 
   useEffect(() => {
-    const q = query(
-      collection(db, "messages"),
-      orderBy("createdAt", "desc")
-    );
+    const q = query(collection(db, "messages"), orderBy("createdAt", "desc"));
 
     const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
       const fetchedMessages = [];
