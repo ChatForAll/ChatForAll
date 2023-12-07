@@ -14,7 +14,7 @@ body {
   background-color: #191724;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
@@ -33,7 +33,6 @@ button{
   color: #e0def4;
 }
 
-
 .chat-img {
   width: 35px;
   height: 35px;
@@ -47,6 +46,7 @@ button{
   padding: 1rem;
   display: flex;
   flex-direction: row;
+  position: relative;
   align-items: center;
   border-radius: 1rem;
 }
@@ -93,4 +93,20 @@ button{
   color: #242443;
   background-color: #f6c177;
   font-weight: 600;
+}
+
+.copy-button {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  margin-right: 15px;
+  transform: translateY(-50%);
+  background: none;
+  border: solid 1px #a6e3a1;
+  border-radius: 5px;
+  padding: 5px;
+  transition: 0.3s ease;
+}
+.copy-button:hover {
+  filter: brightness(80%);
 }
