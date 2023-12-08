@@ -1,5 +1,5 @@
 {
-  "hosting":[
+  "hosting": [
     {
       "target": "chat4all",
       "public": "out",
@@ -12,6 +12,11 @@
     },
     {
       "target": "note1",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "paru",
       "public": "out",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     }
