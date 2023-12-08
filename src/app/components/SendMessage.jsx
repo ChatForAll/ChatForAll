@@ -1,14 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { db } from "../../firebase-config";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 const SendMessage = ({ scroll }) => {
   const [message, setMessage] = useState("");
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const sendMessage = async (event) => {
     event.preventDefault();
     if (message.trim() === "") {
-      alert("Enter valid message");
+      alert("Message cannot be empty!");
       return;
     }
     await addDoc(collection(db, "messages"), {
@@ -21,6 +26,7 @@ const SendMessage = ({ scroll }) => {
     setMessage("");
     scroll.current.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <form
       onSubmit={(event) => sendMessage(event)}
@@ -38,6 +44,7 @@ const SendMessage = ({ scroll }) => {
         placeholder="type message..."
         value={message}
         onChange={(e) => setMessage(e.target.value)}
+        ref={inputRef}
       />
       <button type="submit">➤</button>
     </form>
