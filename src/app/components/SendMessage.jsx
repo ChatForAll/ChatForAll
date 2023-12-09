@@ -24,7 +24,9 @@ const SendMessage = ({ scroll }) => {
       createdAt: serverTimestamp(),
     });
     setMessage("");
-    scroll.current.scrollIntoView({ behavior: "smooth" });
+    setTimeout(() => {
+      scroll.current.scrollIntoView({ behavior: "smooth", block: "end" });
+    }, 200);
   };
 
   return (
@@ -33,15 +35,12 @@ const SendMessage = ({ scroll }) => {
       className="send-message"
       autoComplete="off"
     >
-      <label htmlFor="messageInput" hidden>
-        Enter Message
-      </label>
       <input
         id="messageInput"
         name="messageInput"
         type="text"
         className="form-input__input"
-        placeholder="type message..."
+        placeholder="type message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         ref={inputRef}
