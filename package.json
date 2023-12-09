@@ -11,6 +11,7 @@
     "deploy": "firebase deploy"
   },
   "dependencies": {
+    "date-fns": "^2.30.0",
     "firebase": "^9.23.0",
     "next": "14.0.3",
     "react": "^18",
