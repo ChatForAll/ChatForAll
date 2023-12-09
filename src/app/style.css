@@ -42,21 +42,33 @@ button {
 
 .chat-bubble {
   background-color: #26233a;
-  margin: 15px 0;
+  margin: 0.7rem 0;
   padding: 1rem;
   display: flex;
-  flex-direction: row;
-  position: relative;
-  align-items: center;
+  flex-direction: column;
   border-radius: 1rem;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.chat-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .user-message {
   word-break: break-all;
 }
+
 .message-time {
-  display: block;
-  text-align: right;
+  display: flex;
+  align-items: center;
+  font-size: 0.7rem;
 }
 
 /* send message */
@@ -96,15 +108,10 @@ button {
 }
 
 .copy-button {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  margin-right: 15px;
-  transform: translateY(-50%);
   background: none;
-  border: solid 1px #a6e3a1;
-  border-radius: 5px;
-  padding: 5px;
+  border: solid 0.1rem #a6e3a1;
+  border-radius: 0.2rem;
+  padding: 0.1rem;
   transition: 0.3s ease;
 }
 .copy-button:hover {
