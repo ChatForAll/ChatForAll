@@ -19,8 +19,6 @@ const SendMessage = ({ scroll }) => {
     await addDoc(collection(db, "messages"), {
       text: message,
       name: "User",
-      avatar:
-        "https://cdn.pixabay.com/photo/2017/01/10/03/54/avatar-1968236_960_720.png",
       createdAt: serverTimestamp(),
     });
     setMessage("");

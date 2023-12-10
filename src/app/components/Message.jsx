@@ -17,7 +17,7 @@ const Message = ({ message }) => {
       {message.createdAt && (
         <div className="chat-bubble">
           <div className="user-info">
-            <img className="chat-img" src={message.avatar} alt="user avatar" />
+            <img className="chat-img" src="/avatar.png" alt="user avatar" />
             <p className="user-message">{message.text}</p>
           </div>
           <div className="chat-info">

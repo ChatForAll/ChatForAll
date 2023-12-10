@@ -59,6 +59,8 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 0.5rem;
+  margin-bottom: -0.5rem;
 }
 
 .user-message {
@@ -109,9 +111,10 @@ button {
 
 .copy-button {
   background: none;
-  border: solid 0.1rem #a6e3a1;
+  border: none;
+  /* border: solid 0.1rem #a6e3a1; */
   border-radius: 0.2rem;
-  padding: 0.1rem;
+  /* padding: 0.1rem; */
   transition: 0.3s ease;
 }
 .copy-button:hover {
