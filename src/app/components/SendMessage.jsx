@@ -27,20 +27,29 @@ const SendMessage = ({ scroll }) => {
     }, 200);
   };
 
+  const handleKeyDown = (event) => {
+    if (window.innerWidth > 768) {
+      if (event.key === "Enter" && !event.shiftKey) {
+        event.preventDefault();
+        sendMessage(event);
+      }
+    }
+  };
+
   return (
     <form
       onSubmit={(event) => sendMessage(event)}
       className="send-message"
       autoComplete="off"
     >
-      <input
+      <textarea
         id="messageInput"
         name="messageInput"
-        type="text"
         className="form-input__input"
         placeholder="type message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
+        onKeyDown={handleKeyDown}
         ref={inputRef}
       />
       <button type="submit">➤</button>

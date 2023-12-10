@@ -18,7 +18,7 @@ const Message = ({ message }) => {
         <div className="chat-bubble">
           <div className="user-info">
             <img className="chat-img" src="/avatar.png" alt="user avatar" />
-            <p className="user-message">{message.text}</p>
+            <div className="user-message">{message.text}</div>
           </div>
           <div className="chat-info">
             <p className="message-time">

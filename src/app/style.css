@@ -66,6 +66,7 @@ button {
   display: flex;
   word-break: break-all;
   align-items: center;
+  white-space: pre-wrap;
 }
 
 .message-time {
@@ -83,20 +84,22 @@ button {
   background-color: #1f1d2e;
   display: flex;
 }
-.send-message > input {
+.send-message > textarea {
   height: 40px;
   padding: 10px 10px;
   border-radius: 5px 0 0 5px;
+  font-family: sans-serif;
   border: none;
   flex-grow: 1;
   background-color: #ebbcba;
   color: #1f1d2e;
   font-size: 1rem;
+  resize: none;
 }
-.send-message > input:placeholder {
+.send-message > textarea:placeholder {
   color: #26233a;
 }
-.send-message > :is(input, button):focus {
+.send-message > :is(textarea, button):focus {
   outline: none;
   border-bottom: 1px solid #6e6a86;
 }
