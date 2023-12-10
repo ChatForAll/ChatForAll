@@ -52,7 +52,6 @@ button {
 .user-info {
   display: flex;
   flex-direction: row;
-  align-items: center;
 }
 
 .chat-info {
@@ -64,7 +63,9 @@ button {
 }
 
 .user-message {
+  display: flex;
   word-break: break-all;
+  align-items: center;
 }
 
 .message-time {
