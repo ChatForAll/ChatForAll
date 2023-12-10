@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { query, collection, orderBy, onSnapshot } from "firebase/firestore";
+import { query, collection, orderBy, onSnapshot, getDocs, writeBatch } from "firebase/firestore";
 import { db } from "../../firebase-config";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
@@ -37,6 +37,25 @@ const ChatBox = () => {
       <SendMessage scroll={scroll} />
     </main>
   );
+};
+
+export const DeleteMessages = async () => {
+  const fortyEightHoursAgo = new Date();
+  fortyEightHoursAgo.setHours(fortyEightHoursAgo.getHours() - 48);
+
+  const delmsg = query(collection(db, "messages"), orderBy("createdAt", "asc"));
+
+  const snapshot = await getDocs(delmsg);
+  const batch = writeBatch(db);
+
+  snapshot.forEach((doc) => {
+    const createdAt = doc.data().createdAt.toDate();
+    if (createdAt < fortyEightHoursAgo) {
+      batch.delete(doc.ref);
+    }
+  });
+
+  await batch.commit();
 };
 
 export default ChatBox;
