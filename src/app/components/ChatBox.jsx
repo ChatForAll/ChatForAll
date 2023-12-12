@@ -1,7 +1,15 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
-import { query, collection, orderBy, onSnapshot, getDocs, writeBatch } from "firebase/firestore";
+import {
+  query,
+  collection,
+  orderBy,
+  onSnapshot,
+  getDocs,
+  writeBatch,
+} from "firebase/firestore";
 import { db } from "../../firebase-config";
+import AdminMessage from "./AdminMessage";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
 
@@ -28,6 +36,12 @@ const ChatBox = () => {
   return (
     <main className="chat-box">
       <div className="messages-wrapper">
+        <AdminMessage>
+          Welcome to ChatForAll. Enjoy hassle-free chatting without
+          authentication. Easily copy messages using the dedicated button, and
+          click the &apos;?&apos; button to reveal shortcuts. Messages auto-remove after
+          48 hours. Happy chatting! 🚀
+        </AdminMessage>
         {messages?.map((message) => (
           <Message key={message.id} message={message} />
         ))}
