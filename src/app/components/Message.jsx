@@ -15,20 +15,26 @@ const Message = ({ message }) => {
   return (
     <>
       {message.createdAt && (
-        <div className="chat-bubble">
-          <div className="user-info">
-            <img className="chat-img" src="/avatar.png" alt="user avatar" />
-            <div className="user-message">{message.text}</div>
+        <div class="bg-[#26233a] my-3 p-4 flex flex-col rounded-2xl">
+          <div class="flex flex-row">
+            <img
+              class="w-8 h-8 rounded-full mr-2.5"
+              src="/avatar.png"
+              alt="user avatar"
+            />
+            <div class="flex items-center break-all whitespace-pre-wrap">
+              {message.text}
+            </div>
           </div>
-          <div className="chat-info">
-            <p className="message-time">
+          <div class="flex flex-row justify-between mt-2 -mb-2">
+            <p class="flex items-center text-xs">
               {format(
                 new Date(message.createdAt.seconds * 1000),
                 "MMMM d, hh:mm a"
               )}
             </p>
             <button
-              className="copy-button"
+              class="bg-none border-none rounded ease-in duration-200 hover:brightness-75"
               onClick={handleCopy}
               disabled={isCopied}
             >
