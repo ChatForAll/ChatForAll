@@ -35,7 +35,7 @@ const ChatBox = () => {
 
   return (
     <>
-      <div class="p-5 mb-7 text-[#e0def4]">
+      <div class="p-5 mb-16 text-[#e0def4]">
         <AdminMessage>
           Welcome to ChatForAll. Enjoy hassle-free chatting without
           authentication. Easily copy messages using the dedicated button, and
