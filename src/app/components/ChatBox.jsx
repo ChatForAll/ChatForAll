@@ -34,8 +34,8 @@ const ChatBox = () => {
   }, []);
 
   return (
-    <main className="chat-box">
-      <div className="messages-wrapper">
+    <>
+      <div class="p-5 mb-7 text-[#e0def4]">
         <AdminMessage>
           Welcome to ChatForAll. Enjoy hassle-free chatting without
           authentication. Easily copy messages using the dedicated button, and
@@ -49,7 +49,7 @@ const ChatBox = () => {
       {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
       <span ref={scroll}></span>
       <SendMessage scroll={scroll} />
-    </main>
+    </>
   );
 };
 
