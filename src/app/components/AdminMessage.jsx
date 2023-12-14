@@ -1,20 +1,22 @@
 const AdminMessage = (props) => {
   return (
-    <div className="chat-bubble">
-      <div className="user-info">
-        <img className="chat-img" src="/chatforall.svg" alt="user avatar" />
-        <div className="user-message" style={{ wordBreak: "break-word" }}>
+    <div class="bg-[#26233a] my-3 p-4 flex flex-col rounded-2xl">
+      <div class="flex flex-row">
+        <img
+          class="w-8 h-8 rounded-full mr-2.5"
+          src="/chatforall.svg"
+          alt="admin"
+        />
+        <div class="flex items-center break-words whitespace-pre-wrap">
           {props.children}
         </div>
       </div>
-      <div className="chat-info">
-        <p
-          className="message-time"
-          // style={{ color: "#f9e2af", fontWeight: 600 }}
+      <div class="flex flex-row justify-between mt-2 -mb-2">
+        <p class="flex items-center text-xs">Admin</p>
+        <button
+          class="bg-none border-none rounded ease-in duration-200 hover:brightness-75"
+          onClick={null}
         >
-          Admin
-        </p>
-        <button className="copy-button" onClick={null}>
           <svg
             width="15"
             height="15"

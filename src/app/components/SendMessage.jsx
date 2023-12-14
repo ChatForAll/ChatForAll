@@ -39,20 +39,25 @@ const SendMessage = ({ scroll }) => {
   return (
     <form
       onSubmit={(event) => sendMessage(event)}
-      className="send-message"
+      class="fixed bottom-0 w-full bg-[#1f1d2e] px-7 py-5 flex"
       autoComplete="off"
     >
       <textarea
         id="messageInput"
         name="messageInput"
-        className="form-input__input"
+        class="h-10 p-2.5 rounded-l-xl font-sans border-none grow bg-[#fab387] text-[#1f1d2e] text-base leading-none resize-none placeholder:text-[#26233a] focus:ring focus:ring-[#94e2d5] focus:duration-1000 focus:outline-none ring-inset"
         placeholder="type message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
         onKeyDown={handleKeyDown}
         ref={inputRef}
       />
-      <button type="submit">➤</button>
+      <button
+        class="w-16 h-10 px-2.5 py-1 rounded-r-xl text-[#242443] bg-[#94e2d5] font-semibold"
+        type="submit"
+      >
+        ➤
+      </button>
     </form>
   );
 };
