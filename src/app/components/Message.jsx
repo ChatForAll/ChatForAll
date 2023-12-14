@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import format from "date-fns/format";
+import Image from "next/image";
 
 const Message = ({ message }) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -15,26 +16,28 @@ const Message = ({ message }) => {
   return (
     <>
       {message.createdAt && (
-        <div class="bg-[#26233a] my-3 p-4 flex flex-col rounded-2xl">
-          <div class="flex flex-row">
-            <img
-              class="w-8 h-8 rounded-full mr-2.5"
+        <div className="bg-[#26233a] my-3 p-4 flex flex-col rounded-2xl">
+          <div className="flex flex-row">
+            <Image
+              className="w-8 h-8 rounded-full mr-2.5"
+              width={32}
+              height={32}
               src="/avatar.png"
               alt="user avatar"
             />
-            <div class="flex items-center break-all whitespace-pre-wrap">
+            <div className="flex items-center break-all whitespace-pre-wrap">
               {message.text}
             </div>
           </div>
-          <div class="flex flex-row justify-between mt-2 -mb-2">
-            <p class="flex items-center text-xs">
+          <div className="flex flex-row justify-between mt-2 -mb-2">
+            <p className="flex items-center text-xs">
               {format(
                 new Date(message.createdAt.seconds * 1000),
                 "MMMM d, hh:mm a"
               )}
             </p>
             <button
-              class="bg-none border-none rounded ease-in duration-200 hover:brightness-75"
+              className="bg-none border-none rounded ease-in duration-200 hover:brightness-75"
               onClick={handleCopy}
               disabled={isCopied}
             >

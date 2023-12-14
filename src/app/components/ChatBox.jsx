@@ -35,12 +35,12 @@ const ChatBox = () => {
 
   return (
     <>
-      <div class="p-5 mb-16 text-[#e0def4]">
+      <div className="p-5 mb-16 text-[#e0def4]">
         <AdminMessage>
           Welcome to ChatForAll. Enjoy hassle-free chatting without
           authentication. Easily copy messages using the dedicated button, and
-          click the &apos;?&apos; button to reveal shortcuts. Messages auto-remove after
-          48 hours. Happy chatting! 🚀
+          click the &apos;?&apos; button to reveal shortcuts. Messages
+          auto-remove after 48 hours. Happy chatting! 🚀
         </AdminMessage>
         {messages?.map((message) => (
           <Message key={message.id} message={message} />
@@ -54,22 +54,22 @@ const ChatBox = () => {
 };
 
 export const DeleteMessages = async () => {
-  // const fortyEightHoursAgo = new Date();
-  // fortyEightHoursAgo.setHours(fortyEightHoursAgo.getHours() - 48);
+  const fortyEightHoursAgo = new Date();
+  fortyEightHoursAgo.setHours(fortyEightHoursAgo.getHours() - 48);
 
-  // const delmsg = query(collection(db, "messages"), orderBy("createdAt", "asc"));
+  const delmsg = query(collection(db, "messages"), orderBy("createdAt", "asc"));
 
-  // const snapshot = await getDocs(delmsg);
-  // const batch = writeBatch(db);
+  const snapshot = await getDocs(delmsg);
+  const batch = writeBatch(db);
 
-  // snapshot.forEach((doc) => {
-  //   const createdAt = doc.data().createdAt.toDate();
-  //   if (createdAt < fortyEightHoursAgo) {
-  //     batch.delete(doc.ref);
-  //   }
-  // });
+  snapshot.forEach((doc) => {
+    const createdAt = doc.data().createdAt.toDate();
+    if (createdAt < fortyEightHoursAgo) {
+      batch.delete(doc.ref);
+    }
+  });
 
-  // await batch.commit();
+  await batch.commit();
 };
 
 export default ChatBox;

@@ -1,20 +1,24 @@
+import Image from "next/image";
+
 const AdminMessage = (props) => {
   return (
-    <div class="bg-[#26233a] my-3 p-4 flex flex-col rounded-2xl">
-      <div class="flex flex-row">
-        <img
-          class="w-8 h-8 rounded-full mr-2.5"
+    <div className="bg-[#26233a] my-3 p-4 flex flex-col rounded-2xl">
+      <div className="flex flex-row">
+        <Image
+          className="w-8 h-8 rounded-full mr-2.5"
+          width={32}
+          height={32}
           src="/chatforall.svg"
           alt="admin"
         />
-        <div class="flex items-center break-words whitespace-pre-wrap">
+        <div className="flex items-center break-words whitespace-pre-wrap">
           {props.children}
         </div>
       </div>
-      <div class="flex flex-row justify-between mt-2 -mb-2">
-        <p class="flex items-center text-xs">Admin</p>
+      <div className="flex flex-row justify-between mt-2 -mb-2">
+        <p className="flex items-center text-xs">Admin</p>
         <button
-          class="bg-none border-none rounded ease-in duration-200 hover:brightness-75"
+          className="bg-none border-none rounded ease-in duration-200 hover:brightness-75"
           onClick={null}
         >
           <svg

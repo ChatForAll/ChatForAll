@@ -39,13 +39,13 @@ const SendMessage = ({ scroll }) => {
   return (
     <form
       onSubmit={(event) => sendMessage(event)}
-      class="fixed bottom-0 w-full bg-[#1f1d2e] px-7 py-5 flex"
+      className="fixed bottom-0 w-full bg-[#1f1d2e] px-7 py-5 flex"
       autoComplete="off"
     >
       <textarea
         id="messageInput"
         name="messageInput"
-        class="h-10 p-2.5 rounded-l-xl font-sans border-none grow bg-[#fab387] text-[#1f1d2e] text-base leading-none resize-none placeholder:text-[#26233a] focus:ring focus:ring-[#94e2d5] focus:duration-1000 focus:outline-none ring-inset"
+        className="h-10 p-2.5 rounded-l-xl font-sans border-none grow bg-[#fab387] text-[#1f1d2e] text-base leading-none resize-none placeholder:text-[#26233a] focus:ring focus:ring-[#94e2d5] focus:duration-1000 focus:outline-none ring-inset"
         placeholder="type message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
@@ -53,7 +53,7 @@ const SendMessage = ({ scroll }) => {
         ref={inputRef}
       />
       <button
-        class="w-16 h-10 px-2.5 py-1 rounded-r-xl text-[#242443] bg-[#94e2d5] font-semibold"
+        className="w-16 h-10 px-2.5 py-1 rounded-r-xl text-[#242443] bg-[#94e2d5] font-semibold"
         type="submit"
       >
         ➤
