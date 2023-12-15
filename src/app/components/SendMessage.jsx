@@ -60,7 +60,7 @@ const SendMessage = ({ scroll }) => {
         ref={inputRef}
       />
       <button
-        className="w-16 h-10 px-2.5 py-1 rounded-r-xl text-[#242443] bg-[#94e2d5] font-semibold"
+        className="w-16 h-10 px-2.5 py-1 rounded-r-xl text-[#242443] bg-[#a6e3a1] font-semibold"
         type="submit"
       >
         ➤
