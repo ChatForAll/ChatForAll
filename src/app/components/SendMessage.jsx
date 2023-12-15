@@ -45,7 +45,7 @@ const SendMessage = ({ scroll }) => {
       <textarea
         id="messageInput"
         name="messageInput"
-        className="h-10 p-2.5 rounded-l-xl font-sans border-none grow bg-[#fab387] text-[#1f1d2e] text-base leading-none resize-none placeholder:text-[#26233a] focus:ring focus:ring-[#94e2d5] focus:duration-1000 focus:outline-none ring-inset"
+        className="h-10 p-2.5 rounded-l-xl font-sans border-none grow bg-[#fab387] text-[#1f1d2e] text-base leading-none resize-none placeholder:text-[#26233a] focus:ring focus:ring-[#a6e3a1] focus:duration-1000 focus:outline-none ring-inset"
         placeholder="type message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
