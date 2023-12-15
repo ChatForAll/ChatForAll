@@ -30,8 +30,25 @@ const ChatBox = () => {
       );
       setMessages(sortedMessages);
     });
-    return () => unsubscribe;
+    return () => unsubscribe();
   }, []);
+
+  const copyLastMessage = () => {
+    const lastMessage = messages[messages.length - 1];
+    if (lastMessage) {
+      navigator.clipboard.writeText(lastMessage.text);
+    }
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.ctrlKey && e.shiftKey && (e.key === "c" || e.key === "C")) {
+        e.preventDefault();
+        copyLastMessage();
+      }
+    };
+    document.addEventListener("keydown", handleKeyDown);
+  }, [messages]);
 
   return (
     <>
@@ -48,6 +65,7 @@ const ChatBox = () => {
       {/* when a new message enters the chat, the screen scrolls down to the scroll div */}
       <span ref={scroll}></span>
       <SendMessage scroll={scroll} />
+      {/* <button onClick={copyLastMessage}>CopyLastMessage</button> */}
     </>
   );
 };

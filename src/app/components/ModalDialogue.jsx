@@ -1,4 +1,5 @@
-import { useState } from "react";
+"use client";
+import { useState, useEffect } from "react";
 
 const ModalDialogue = ({ svgIcon, title, items }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,6 +10,23 @@ const ModalDialogue = ({ svgIcon, title, items }) => {
   const openModal = () => {
     setIsOpen(true);
   };
+
+  useEffect(() => {
+    const handleKeyDown = (event) => {
+      if (event.ctrlKey && event.key === "/") {
+        event.preventDefault();
+        openModal();
+      }
+      if (isOpen ==true) {
+        if (event.key === "Escape") {
+          event.preventDefault();
+          closeModal();
+        }
+      }
+    };
+
+    document.addEventListener("keydown", handleKeyDown);
+  });
 
   return (
     <>
@@ -25,7 +43,10 @@ const ModalDialogue = ({ svgIcon, title, items }) => {
             <div className="bg-[#191724c0] backdrop-blur-sm text-[#bac2de] p-4 rounded shadow">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-semibold m-4">{title}</h2>
-                <button onClick={closeModal} className="flex text-xs mb-4 ease-in duration-200 ring-inset rounded-xl p-0.5 ring-[#bac2de] ring-1 hover:brightness-50">
+                <button
+                  onClick={closeModal}
+                  className="flex text-xs mb-4 ease-in duration-200 ring-inset rounded-xl p-0.5 ring-[#bac2de] ring-1 hover:brightness-50"
+                >
                   <svg
                     stroke="currentColor"
                     fill="#bac2de"

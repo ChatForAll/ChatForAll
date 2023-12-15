@@ -8,6 +8,13 @@ const SendMessage = ({ scroll }) => {
 
   useEffect(() => {
     inputRef.current.focus();
+    const handleKDown = (e) => {
+      if (e.shiftKey && e.key === "Escape") {
+        e.preventDefault();
+        inputRef.current.focus();
+      }
+    };
+    document.addEventListener("keydown", handleKDown);
   }, []);
 
   const sendMessage = async (event) => {
