@@ -3,7 +3,7 @@ import ModalDialogue from "./ModalDialogue";
 
 const AdminMessage = (props) => {
   return (
-    <div className="bg-[#26233a] my-3 p-4 flex flex-col rounded-2xl">
+    <div className="bg-[#e6e9ef] dark:bg-[#1e1e2e] my-3 p-4 flex flex-col rounded-2xl">
       <div className="flex flex-row">
         <Image
           className="w-8 h-8 rounded-full mr-2.5"
@@ -23,7 +23,8 @@ const AdminMessage = (props) => {
             <svg
               width="15"
               height="15"
-              fill="#f9e2af"
+              className="text-[#8839ef] dark:text-[#f9e2af]"
+              fill="currentColor"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 15 15"
             >

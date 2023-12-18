@@ -52,11 +52,11 @@ const ChatBox = () => {
 
   return (
     <>
-      <div className="p-5 mb-16 text-[#e0def4]">
+      <div className="p-5 mb-16 text-[#4c4f69] dark:text-[#cad3f5]">
         <AdminMessage>
           Welcome to ChatForAll. Enjoy hassle-free chatting without
           authentication. Easily copy messages using the dedicated button.
-          Messages auto-remove after 48 hours. Happy chatting! 🚀
+          Messages auto-remove after 48 hours. Happy chatting 🚀
         </AdminMessage>
         {messages?.map((message) => (
           <Message key={message.id} message={message} />

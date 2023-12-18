@@ -46,13 +46,13 @@ const SendMessage = ({ scroll }) => {
   return (
     <form
       onSubmit={(event) => sendMessage(event)}
-      className="fixed bottom-0 w-full bg-[#1f1d2e] px-7 py-5 flex"
+      className="fixed bottom-0 w-full bg-[#e6e9ef] dark:bg-[#181825] px-7 py-5 flex"
       autoComplete="off"
     >
       <textarea
         id="messageInput"
         name="messageInput"
-        className="h-10 p-2.5 rounded-l-xl font-sans border-none grow bg-[#fab387] text-[#1f1d2e] text-base leading-none resize-none placeholder:text-[#26233a] focus:ring focus:ring-[#a6e3a1] focus:duration-1000 focus:outline-none ring-inset"
+        className="h-10 p-2.5 rounded-l-xl font-sans border-none grow bg-[#313244] dark:bg-[#fab387] text-[#eff1f5] dark:text-[#11111b] text-base leading-none resize-none placeholder:text-[#eff1f5] dark:placeholder:text-[#1e1e2e] focus:ring focus:ring-[#1e66f5] dark:focus:ring-[#a6e3a1] focus:duration-1000 focus:outline-none ring-inset"
         placeholder="type message"
         value={message}
         onChange={(e) => setMessage(e.target.value)}
@@ -60,7 +60,7 @@ const SendMessage = ({ scroll }) => {
         ref={inputRef}
       />
       <button
-        className="w-16 h-10 px-2.5 py-1 rounded-r-xl text-[#242443] bg-[#a6e3a1] font-semibold"
+        className="w-16 h-10 px-2.5 py-1 rounded-r-xl text-[#eff1f5] dark:text-[#1e1e2e] bg-[#1e66f5] dark:bg-[#a6e3a1] font-semibold"
         type="submit"
       >
         ➤

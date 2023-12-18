@@ -9,16 +9,6 @@
       "target": "chatforall",
       "public": "out",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-    },
-    {
-      "target": "note1",
-      "public": "out",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
-    },
-    {
-      "target": "paru",
-      "public": "out",
-      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     }
   ]
 }

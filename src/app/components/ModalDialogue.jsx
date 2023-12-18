@@ -40,12 +40,12 @@ const ModalDialogue = ({ svgIcon, title, items }) => {
       {isOpen && (
         <div className="fixed z-10 inset-0 overflow-y-auto">
           <div className="flex items-center justify-center min-h-screen">
-            <div className="bg-[#191724c0] backdrop-blur-sm text-[#bac2de] p-4 rounded shadow">
+            <div className="bg-[#dce0e89a] text-[#5c5f77] dark:bg-[#191724c0] dark:text-[#bac2de] backdrop-blur-sm p-4 rounded shadow">
               <div className="flex items-center justify-between">
                 <h2 className="text-2xl font-semibold m-2">{title}</h2>
                 <button
                   onClick={closeModal}
-                  className="flex text-xs mb-4 ease-in duration-200 ring-inset rounded-xl p-0.5 ring-[#bac2de] ring-1 hover:brightness-50"
+                  className="flex text-xs mb-4 ease-in duration-200 ring-inset rounded-xl p-0.5 ring-[#5c5f77] dark:ring-[#bac2de] ring-1 hover:brightness-50"
                 >
                   <svg
                     stroke="currentColor"
@@ -63,13 +63,13 @@ const ModalDialogue = ({ svgIcon, title, items }) => {
                   </svg>
                 </button>
               </div>
-              <ul className="list-disc pl-1 flex flex-col">
+              <ul className="text-xs list-disc pl-1 flex flex-col">
                 {items.map((item, index) => (
                   <li key={index} className="mb-6 flex flex-row">
-                    <span className="p-0.5 m-1 font-bold w-40">{item.key}</span>
+                    <span className="p-0.5 m-1 font-semibold w-40">{item.key}</span>
                     {item.values.map((value, index) => (
                       <span
-                        className="text-xs flex justify-center items-center m-1 p-0.5 w-11 border-[#bac2de] border rounded-md"
+                        className="flex justify-center items-center m-1 p-0.5 w-11 border-[#5c5f77] dark:border-[#bac2de] border rounded-md"
                         key={index}
                       >
                         {value}
