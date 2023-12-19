@@ -58,7 +58,7 @@ const ChatBox = () => {
       {loading ? (
         <Preloader />
       ) : (
-        <div className="p-5 mb-16 text-[#4c4f69] dark:text-[#cad3f5]">
+        <div className="p-5 mb-16 text-[#3b3424] dark:text-[#cad3f5]">
           <AdminMessage>
             Greetings and welcome to ChatForAll, a simple online chat
             application. There is no need to log in. Use the clipboard button to
