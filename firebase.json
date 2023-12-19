@@ -9,6 +9,11 @@
       "target": "chatforall",
       "public": "out",
       "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    },
+    {
+      "target": "c4all",
+      "public": "out",
+      "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
     }
   ]
 }
