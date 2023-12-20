@@ -30,7 +30,7 @@ const Message = ({ message }) => {
               <Linkify>{message.text}</Linkify>
             </div>
           </div>
-          <div className="flex flex-row justify-between mt-2 -mb-2">
+          <div className="flex flex-row justify-between mt-2">
             <p className="flex items-center text-xs">
               {format(
                 new Date(message.createdAt.seconds * 1000),
