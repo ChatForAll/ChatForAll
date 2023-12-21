@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { db } from "../../firebase-config";
+import { db, messages_db } from "../../firebase-config";
 import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 
 const SendMessage = ({ scroll }) => {
@@ -23,7 +23,7 @@ const SendMessage = ({ scroll }) => {
       alert("Message cannot be empty!");
       return;
     }
-    await addDoc(collection(db, "messages"), {
+    await addDoc(collection(db, messages_db), {
       text: message,
       name: "User",
       createdAt: serverTimestamp(),

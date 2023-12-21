@@ -7,7 +7,7 @@ import {
   getDocs,
   writeBatch,
 } from "firebase/firestore";
-import { db } from "../../firebase-config";
+import { db, messages_db} from "../../firebase-config";
 import AdminMessage from "./AdminMessage";
 import Message from "./Message";
 import SendMessage from "./SendMessage";
@@ -19,7 +19,7 @@ const ChatBox = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const q = query(collection(db, "messages"), orderBy("createdAt", "desc"));
+    const q = query(collection(db, messages_db), orderBy("createdAt", "desc"));
 
     const unsubscribe = onSnapshot(q, (QuerySnapshot) => {
       const fetchedMessages = [];
@@ -81,7 +81,7 @@ export const DeleteMessages = async () => {
   const fortyEightHoursAgo = new Date();
   fortyEightHoursAgo.setHours(fortyEightHoursAgo.getHours() - 48);
 
-  const delmsg = query(collection(db, "messages"), orderBy("createdAt", "asc"));
+  const delmsg = query(collection(db, messages_db), orderBy("createdAt", "asc"));
 
   const snapshot = await getDocs(delmsg);
   const batch = writeBatch(db);
