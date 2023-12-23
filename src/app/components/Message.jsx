@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import format from "date-fns/format";
 import Image from "next/image";
-import Linkify from "linkify-react";
 
 const Message = ({ message }) => {
   const [isCopied, setIsCopied] = useState(false);
@@ -27,7 +26,7 @@ const Message = ({ message }) => {
               alt="user avatar"
             />
             <div className="flex items-center break-all whitespace-pre-wrap">
-              <Linkify>{message.text}</Linkify>
+              {message.text}
             </div>
           </div>
           <div className="flex flex-row justify-between mt-2">
