@@ -56,3 +56,7 @@ ChatForAll is licensed under the [MIT License](LICENSE). Please review and adher
 [![next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=ffffff "Next.js")](https://nextjs.org/docs)
 [![tailwindcss](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=ffffff "Tailwind CSS")](https://tailwindcss.com/docs/)
 [![firebase](https://img.shields.io/badge/FIREBASE-FFCA28?style=for-the-badge&logo=firebase&logoColor=333333 "firebase")](https://firebase.google.com/docs)
+
+## 🤝 Thanks
+
+Special thanks to [Parthipan](https://github.com/parthipannb) for suggesting the idea of a chat app without the need for login authentication and the auto-delete message feature.
