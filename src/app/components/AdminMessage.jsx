@@ -3,7 +3,7 @@ import ModalDialogue from "./ModalDialogue";
 
 const AdminMessage = (props) => {
   return (
-    <div className="bg-[#e6e9ef] dark:bg-[#1e1e2e] my-3 p-4 flex flex-col rounded-2xl">
+    <div className="bg-[#e6e9ef] dark:bg-[#1e1e2e] my-3 p-4 flex flex-col rounded-2xl w-full md:w-3/4 lg:w:2/3 xl:w-3/5 2xl:w-1/2">
       <div className="flex flex-row">
         <Image
           className="w-8 h-8 rounded-full mr-2.5"
