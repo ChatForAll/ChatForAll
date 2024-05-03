@@ -14,6 +14,7 @@
     "@anatoliygatt/dark-mode-toggle": "^1.0.1",
     "date-fns": "^2.30.0",
     "firebase": "^9.23.0",
+    "lodash": "^4.17.21",
     "next": "14.0.4",
     "next-themes": "^0.2.1",
     "react": "^18",
