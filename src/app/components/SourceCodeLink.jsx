@@ -4,6 +4,7 @@ const SourceCodeLink = () => {
       <a
         // className="fixed ml-9 left-0"
         href="https://github.com/chatforall"
+        target="_blank"
       >
         <svg
           className="fill-[#171515] dark:fill-[#e8eaea] "
@@ -17,6 +18,7 @@ const SourceCodeLink = () => {
       <a
         className="fixed ml-12 left-0 bg-[#5f7fff] dark:bg-gray-200 p-1 rounded-2xl"
         href="https://buymeacoffee.com/sameemul_haque"
+        target="_blank"
       >
       <svg
           className=""
