@@ -21,7 +21,6 @@ const SourceCodeLink = () => {
         target="_blank"
       >
       <svg
-          className=""
           height="25"
           viewBox="0 0 35 50"
           width="25"
