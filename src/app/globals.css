@@ -28,8 +28,7 @@ body {
 
 a {
   text-decoration: underline;
-  filter: hue-rotate(180deg);
-  transition: all 1s ease-in-out;
+  transition: all 4ms ease-in-out;
 }
 a:hover {
   filter: opacity(0.7);
