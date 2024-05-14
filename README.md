@@ -2,6 +2,8 @@
 
 ChatForAll is a simple real-time chat application created using [Next.js](https://nextjs.org/docs), [Tailwind CSS](https://tailwindcss.com/docs) and [Firebase](https://firebase.google.com/docs), designed for ease of use and accessibility without the need for user authentication.
 
+[![buymeacoffee](https://img.shields.io/badge/Buy_me_a_coffee-FFDD00?style=for-the-badge&logo=buymeacoffee&logoColor=1B1B1B "Buy me a coffee")](https://buymeacoffee.com/sameemul_haque)
+
 ## ✨ Features
 
 - **No Login Required**: Enjoy hassle-free chatting without the need for user authentication. Simply visit the website and start chatting right away.
