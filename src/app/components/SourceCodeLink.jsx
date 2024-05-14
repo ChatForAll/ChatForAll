@@ -16,7 +16,7 @@ const SourceCodeLink = () => {
         </svg>
       </a>
       <a
-        className="fixed ml-12 left-0 bg-[#5f7fff] dark:bg-gray-200 p-1 rounded-2xl"
+        className="absolute left-12 bg-[#5f7fff] dark:bg-gray-200 p-1 rounded-2xl"
         href="https://buymeacoffee.com/sameemul_haque"
         target="_blank"
       >
