@@ -18,6 +18,8 @@ ChatForAll is a simple real-time chat application created using [Next.js](https:
 
 - **Simple and Minimal UI**: A clean and minimalistic user interface ensures an intuitive and distraction-free chatting experience.
 
+- **PWA Support**: Experience the convenience of a Progressive Web App (PWA) with the option to install the app on your device for a native-like experience. 
+
 ## 🚀 Host your own site
 
 To host your own version of ChatForAll, follow these steps:
